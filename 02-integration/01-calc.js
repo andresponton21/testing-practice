@@ -1,8 +1,12 @@
 // ==================================================
 // DEFINE FUNCTION(S)
 // ==================================================
-function calc() {
-
+function calc(operation, num1, num2) {
+        switch (operation){
+          case 'add': return num1 + num2;
+        
+          case 'subtract': return num1-num2;
+        }
 }
 
 // ==================================================
@@ -20,6 +24,8 @@ try {
   // Test Case 2
   // --------------------------------------------------
   // It should return the correct difference when the user provides: 'subtract', 20, 10.
+  var result = calc('subtract', 20, 10);
+  if (result !== 10) throw new Error('Expected calc("add", 1, 1) to be 2. Received: ' + result);
 
   // --------------------------------------------------
   // Test Case 3
